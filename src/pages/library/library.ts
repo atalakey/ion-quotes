@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Quote } from '../../app/data/quote.interface';
 import quotes from '../../app/data/quotes';
+import { QuotesPage } from '../quotes/quotes';
 
 /**
  * Generated class for the LibraryPage page.
@@ -18,6 +19,7 @@ import quotes from '../../app/data/quotes';
 })
 export class LibraryPage implements OnInit {
   quoteCollection: {category: string, quotes: Quote[], icon: string}[];
+  quotesPage = QuotesPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
