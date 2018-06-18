@@ -40,7 +40,7 @@ export class FavoritesPage {
       modal.present();
       modal.onDidDismiss((unfavorite: boolean) => {
         if(unfavorite) {
-          this.onRemoveFromFavorit(quote);
+          this.onRemoveFromFavorites(quote);
         }
       });
   }
