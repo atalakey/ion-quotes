@@ -1,16 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavParams, AlertController } from 'ionic-angular';
 
-import { Quote } from '../../app/data/quote.interface';
 import { QuotesService } from '../../services/quotes';
 import { SettingsService } from '../../services/settings';
-
-/**
- * Generated class for the QuotesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Quote } from '../../app/data/quote.interface';
 
 @IonicPage()
 @Component({
@@ -20,8 +13,7 @@ import { SettingsService } from '../../services/settings';
 export class QuotesPage implements OnInit {
   quoteGroup: {category: string, quotes: Quote[], icon: string};
 
-  constructor(private navCtrl: NavController,
-              private navParams: NavParams,
+  constructor(private navParams: NavParams,
               private alertCtrl: AlertController,
               private quoteService: QuotesService,
               private settingsService: SettingsService) {

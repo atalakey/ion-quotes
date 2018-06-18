@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, AlertController } from 'ionic-angular';
-import { SettingsService } from '../../services/settings';
+import { IonicPage, NavParams, ViewController, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the QuotePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { SettingsService } from '../../services/settings';
 
 @IonicPage()
 @Component({
@@ -18,8 +12,7 @@ export class QuotePage {
   person: string;
   text: string;
 
-  constructor(private navCtrl: NavController,
-              private navParams: NavParams,
+  constructor(private navParams: NavParams,
               private viewCtrl: ViewController,
               private alertCtrl: AlertController,
               private settingsService: SettingsService) {

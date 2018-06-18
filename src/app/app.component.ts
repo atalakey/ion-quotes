@@ -10,6 +10,7 @@ import { SettingsPage } from '../pages/settings/settings';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
   tabsPage = TabsPage;
   settingsPage = SettingsPage;
   @ViewChild('content') navCtrl: NavController;
@@ -27,5 +28,5 @@ export class MyApp {
     this.navCtrl.setRoot(page);
     this.menuCtrl.close();
   }
-}
 
+}

@@ -1,16 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, ModalController } from 'ionic-angular';
 
 import { QuotePage } from '../quote/quote';
 import { QuotesService } from '../../services/quotes';
 import { Quote } from '../../app/data/quote.interface';
-
-/**
- * Generated class for the FavoritesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -20,9 +13,7 @@ import { Quote } from '../../app/data/quote.interface';
 export class FavoritesPage {
   quotes: Quote[];
 
-  constructor(private navCtrl: NavController,
-              private navParams: NavParams,
-              private quoteService: QuotesService,
+  constructor(private quoteService: QuotesService,
               private modalCtrl: ModalController) {
   }
 

@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Toggle } from 'ionic-angular';
-import { SettingsService } from '../../services/settings';
+import { IonicPage, Toggle } from 'ionic-angular';
 
-/**
- * Generated class for the SettingsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { SettingsService } from '../../services/settings';
 
 @IonicPage()
 @Component({
@@ -16,7 +10,7 @@ import { SettingsService } from '../../services/settings';
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private settingService: SettingsService) {
+  constructor(private settingService: SettingsService) {
   }
 
   ionViewDidLoad() {
