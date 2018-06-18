@@ -10,12 +10,18 @@ export class QuotesService {
 
   removeQuoteFromFavorites(quote: Quote): void {
     const position = this.favoriteQuotes.findIndex((quoteEl: Quote) => {
-      return quoteEl.id === quote.id;
+      return quoteEl.id == quote.id;
     });
     this.favoriteQuotes.splice(position, 1);
   }
 
   getFavoriteQuote(): Quote[] {
     return this.favoriteQuotes.slice();
+  }
+
+  isQuoteFavorite(quote: Quote) {
+    return this.favoriteQuotes.find((quoteEl: Quote) => {
+      return quoteEl.id == quote.id;
+    })
   }
 }

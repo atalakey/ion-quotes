@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-
-import { Quote } from '../../app/data/quote.interface';
-
+import { IonicPage, NavController, NavParams, ViewController, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the QuotePage page.
@@ -22,7 +19,8 @@ export class QuotePage {
 
   constructor(private navCtrl: NavController,
               private navParams: NavParams,
-              private viewCtrl: ViewController) {
+              private viewCtrl: ViewController,
+              private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -32,7 +30,35 @@ export class QuotePage {
   }
 
   onClose(unfavorite: boolean = false) {
-    this.viewCtrl.dismiss(unfavorite);
+    if(unfavorite) {
+      console.log('hererrerer');
+      const alert = this.alertCtrl.create({
+        title: 'Remove Quote',
+        subTitle: 'Are you sure?',
+        message: 'Are you sure you want to remove this quote from your favorites list?',
+        buttons: [
+          {
+            text: 'No, i changed my mind!',
+            role: 'cancel',
+            handler: () => {
+              console.log('No, i changed my mind! clicked');
+            }
+          },
+          {
+            text: 'Yes, go ahead',
+            handler: () => {
+              console.log('Yes, go ahead clicked');
+              this.viewCtrl.dismiss(unfavorite);
+            }
+          }
+        ]
+      });
+
+      alert.present();
+    }
+    else {
+      this.viewCtrl.dismiss(unfavorite);
+    }
   }
 
 }
