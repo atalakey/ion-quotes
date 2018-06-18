@@ -12,7 +12,7 @@ import { SettingsPage } from '../pages/settings/settings';
 export class MyApp {
   tabsPage = TabsPage;
   settingsPage = SettingsPage;
-  @ViewChild('nav') navCtrl: NavController;
+  @ViewChild('content') navCtrl: NavController;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private menuCtrl: MenuController) {
     platform.ready().then(() => {
