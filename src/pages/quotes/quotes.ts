@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { Quote } from '../../app/data/quote.interface';
+import { QuotesService } from '../../services/quotes';
 
 /**
  * Generated class for the QuotesPage page.
@@ -18,9 +19,10 @@ import { Quote } from '../../app/data/quote.interface';
 export class QuotesPage implements OnInit {
   quoteGroup: {category: string, quotes: Quote[], icon: string};
 
-  constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              public alertCtrl: AlertController) {
+  constructor(private navCtrl: NavController,
+              private navParams: NavParams,
+              private alertCtrl: AlertController,
+              private quoteService: QuotesService) {
   }
 
   ionViewDidLoad() {
@@ -55,6 +57,7 @@ export class QuotesPage implements OnInit {
           text: 'Yes, go ahead',
           handler: () => {
             console.log('Yes, go ahead clicked');
+            this.quoteService.addQuoteToFavorites(selectedQuote);
           }
         }
       ]
