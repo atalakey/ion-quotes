@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 
 import { Quote } from '../../app/data/quote.interface';
 import { QuotesService } from '../../services/quotes';
+import { SettingsService } from '../../services/settings';
 
 /**
  * Generated class for the QuotesPage page.
@@ -22,7 +23,8 @@ export class QuotesPage implements OnInit {
   constructor(private navCtrl: NavController,
               private navParams: NavParams,
               private alertCtrl: AlertController,
-              private quoteService: QuotesService) {
+              private quoteService: QuotesService,
+              private settingsService: SettingsService) {
   }
 
   ionViewDidLoad() {
@@ -94,6 +96,10 @@ export class QuotesPage implements OnInit {
 
   isFavorite(quote: Quote) {
     return this.quoteService.isQuoteFavorite(quote);
+  }
+
+  getBackground() {
+    return this.settingsService.isAltBackgroundStatus() ? 'white' : 'yellow';
   }
 
 }

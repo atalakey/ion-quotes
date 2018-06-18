@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, AlertController } from 'ionic-angular';
+import { SettingsService } from '../../services/settings';
 
 /**
  * Generated class for the QuotePage page.
@@ -20,7 +21,8 @@ export class QuotePage {
   constructor(private navCtrl: NavController,
               private navParams: NavParams,
               private viewCtrl: ViewController,
-              private alertCtrl: AlertController) {
+              private alertCtrl: AlertController,
+              private settingsService: SettingsService) {
   }
 
   ionViewDidLoad() {
@@ -59,6 +61,10 @@ export class QuotePage {
     else {
       this.viewCtrl.dismiss(unfavorite);
     }
+  }
+
+  getBackground() {
+    return this.settingsService.isAltBackgroundStatus() ? 'white' : 'yellow';
   }
 
 }
