@@ -5,7 +5,7 @@ In the app the user can favorite quotes from a static list of quotes.
 
 ### App demo:
 
-<!-- ![](https://i.imgur.com/nsaAgDU.gif) -->
+![](https://gfycat.com/PoorWelllitDowitcher)
 
 ### in this app you will learn how to:
 
