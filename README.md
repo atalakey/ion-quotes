@@ -10,13 +10,13 @@ In the app the user can favorite quotes from a static list of quotes.
 ### in this app you will learn how to:
 
 * _`Implement tabs navigation.`_
-* _`Use the Ionic [List](https://ionicframework.com/docs/components/#lists) component.`_
-* _`Use the Ionic [Card](https://ionicframework.com/docs/components/#cards) component.`_
-* _`Use the Ionic [Alert](https://ionicframework.com/docs/components/#alert) component.`_
-* _`Use the Ionic [Modal](https://ionicframework.com/docs/components/#modals) component.`_
-* _`Use the Ionic [Slide](https://ionicframework.com/docs/components/#slides) component.`_
-* _`Use the Ionic [Menu](https://ionicframework.com/docs/components/#menus) component.`_
-* _`Ionic [Theming](https://ionicframework.com/docs/theming/).`_
+* _`Use the Ionic `[List](https://ionicframework.com/docs/components/#lists)` component.`_
+* _`Use the Ionic `[Card](https://ionicframework.com/docs/components/#cards)` component.`_
+* _`Use the Ionic `[Alert](https://ionicframework.com/docs/components/#alert)` component.`_
+* _`Use the Ionic `[Modal](https://ionicframework.com/docs/components/#modals)` component.`_
+* _`Use the Ionic `[Slide](https://ionicframework.com/docs/components/#slides)` component.`_
+* _`Use the Ionic `[Menu](https://ionicframework.com/docs/components/#menus)` component.`_
+* _`Ionic `[Theming](https://ionicframework.com/docs/theming/)`.`_
 
 ### Disclaimer:
 This app is for demo purposes only.
