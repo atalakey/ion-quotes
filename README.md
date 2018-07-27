@@ -28,7 +28,7 @@ This app is for demo purposes only.
 You must have Ionic, npm and nodejs installed.
 ```
 
-### To install the prerequisites
+### To install the prerequisites (macOS only)
 ```
 1. Install Homebrew:
 
@@ -47,7 +47,7 @@ You must have Ionic, npm and nodejs installed.
 ``` 
 1. Clone the project:
 
-    git clone https://github.com/atalakey/quotes-app.git ~/Desktop/quotes-app
+    git clone https://github.com/atalakey/ion-quotes.git ~/Desktop/quotes-app
 
 2. Navigate to where you cloned the project:
 
